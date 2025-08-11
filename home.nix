@@ -24,26 +24,36 @@
     pkgs.bottom
     pkgs.eza
     pkgs.fend
+    pkgs.jetbrains.pycharm-community-bin
     pkgs.rustup
     pkgs.starship
 
+    pkgs.eog
     pkgs.evince
     pkgs.gimp
     pkgs.git
+    pkgs.gnome-terminal
     pkgs.keepassxc
     pkgs.rdesktop
     pkgs.signal-desktop
     pkgs.thunderbird
+    pkgs.unzip
+    pkgs.zip
 
-    pkgs.gnome-terminal
-
+    pkgs.libsForQt5.qt5ct
     pkgs.kdePackages.kate
+    pkgs.kdePackages.kconfig
     pkgs.kdePackages.okular
 
+    pkgs.mate.mate-calc
+    pkgs.xfce.xfconf
+
+    pkgs.corefonts
     pkgs.hyphen
     pkgs.hyphenDicts.de_DE
     pkgs.hyphenDicts.de-de
     pkgs.libreoffice
+    pkgs.vistafonts
 
     pkgs.nmap
 
@@ -76,6 +86,8 @@
     # '';
   };
 
+  nixpkgs.config.allowUnfree = true;
+
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
@@ -87,6 +99,9 @@
     enable = true;
     userName = "Marijke Stein";
     userEmail = "marijke.stein@hfmdk-frankfurt.de";
+    extraConfig = {
+      core.editor = "mcedit";
+    };
   };
 
   home.file.".bashrc" = {
@@ -97,123 +112,75 @@ eval "$(starship init bash)"
     '';
   };
 
+  gtk.enable = true;
+  gtk.theme.name = "Adwaita-dark";
 
-  home.file.".config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml" = {
-  text = ''
-<?xml version="1.1" encoding="UTF-8"?>
+  qt.enable = true;
+  qt.style.name = "darker";
 
-<channel name="xfce4-desktop" version="1.0">
-  <property name="last-settings-migration-version" type="uint" value="1"/>
-  <property name="last" type="empty">
-    <property name="window-width" type="int" value="714"/>
-    <property name="window-height" type="int" value="547"/>
-  </property>
-  <property name="backdrop" type="empty">
-    <property name="screen0" type="empty">
-      <property name="monitorVirtual-1" type="empty">
-        <property name="workspace0" type="empty">
-          <property name="last-image" type="string" value="/nix/store/mw56lf6l8iyfhzhrr7rf401wmqrvbg1d-xfdesktop-4.20.1/share/backgrounds/xfce/xfce-blue.jpg"/>
-          <property name="image-style" type="int" value="0"/>
-        </property>
-      </property>
-    </property>
-  </property>
-</channel>
-    '';
-  };
+#   qt.kde.settings;
 
-  home.file.".config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml" = {
-  text = ''
-<?xml version="1.1" encoding="UTF-8"?>
+  xfconf = {
+    settings = {
+      xfce4-desktop = {
+        "backdrop/screen0/monitoreDP-1/workspace0/image-style" = 0;
+        "backdrop/screen0/monitoreDP-1/workspace1/image-style" = 0;
+        "desktop-icons/file-icons/show-filesystem" = 0;
+        "desktop-icons/file-icons/show-trash" = 1;
+      };
 
-<channel name="xfce4-panel" version="1.0">
-  <property name="configver" type="int" value="2"/>
-  <property name="panels" type="array">
-    <value type="int" value="1"/>
-    <property name="dark-mode" type="bool" value="true"/>
-    <property name="panel-1" type="empty">
-      <property name="position" type="string" value="p=6;x=0;y=0"/>
-      <property name="length" type="uint" value="100"/>
-      <property name="position-locked" type="bool" value="true"/>
-      <property name="icon-size" type="uint" value="16"/>
-      <property name="size" type="uint" value="36"/>
-      <property name="plugin-ids" type="array">
-        <value type="int" value="1"/>
-        <value type="int" value="11"/>
-        <value type="int" value="2"/>
-        <value type="int" value="3"/>
-        <value type="int" value="4"/>
-        <value type="int" value="5"/>
-        <value type="int" value="6"/>
-        <value type="int" value="7"/>
-        <value type="int" value="8"/>
-        <value type="int" value="9"/>
-        <value type="int" value="13"/>
-        <value type="int" value="10"/>
-        <value type="int" value="12"/>
-      </property>
-    </property>
-  </property>
-  <property name="plugins" type="empty">
-    <property name="plugin-1" type="string" value="applicationsmenu"/>
-    <property name="plugin-2" type="string" value="tasklist">
-      <property name="grouping" type="uint" value="1"/>
-    </property>
-    <property name="plugin-3" type="string" value="separator">
-      <property name="expand" type="bool" value="true"/>
-      <property name="style" type="uint" value="0"/>
-    </property>
-    <property name="plugin-4" type="string" value="pager"/>
-    <property name="plugin-5" type="string" value="separator">
-      <property name="style" type="uint" value="0"/>
-    </property>
-    <property name="plugin-6" type="string" value="systray">
-      <property name="square-icons" type="bool" value="true"/>
-      <property name="known-legacy-items" type="array">
-        <value type="string" value="ethernet network connection “wired connection 1” active"/>
-      </property>
-    </property>
-    <property name="plugin-7" type="string" value="separator">
-      <property name="style" type="uint" value="0"/>
-    </property>
-    <property name="plugin-8" type="string" value="clock">
-      <property name="timezone" type="string" value="Europe/Berlin"/>
-      <property name="digital-layout" type="uint" value="2"/>
-      <property name="digital-date-font" type="string" value="Sans 12"/>
-    </property>
-    <property name="plugin-9" type="string" value="separator">
-      <property name="style" type="uint" value="0"/>
-    </property>
-    <property name="plugin-10" type="string" value="actions"/>
-    <property name="plugin-11" type="string" value="launcher">
-      <property name="items" type="array">
-        <value type="string" value="17543845271.desktop"/>
-      </property>
-    </property>
-    <property name="plugin-12" type="string" value="launcher"/>
-    <property name="plugin-13" type="string" value="clock">
-      <property name="digital-layout" type="uint" value="3"/>
-      <property name="digital-time-font" type="string" value="Sans 12"/>
-    </property>
-  </property>
-</channel>
-    '';
-  };
+      xfce4-notifyd = {
+        "mute-sounds" = true;
+      };
 
-  home.file.".config/xfce4/xfconf/xfce-perchannel-xml/xfce4-screensaver.xml" = {
-  text = ''
-<?xml version="1.1" encoding="UTF-8"?>
+      xfce4-panel = {
+        "panels/dark-mode" = true;
+        "panels/panel-1/icon-size" = 12;
+        "panels/panel-1/size" = 24;
 
-<channel name="xfce4-screensaver" version="1.0">
-  <property name="saver" type="empty">
-    <property name="mode" type="int" value="0"/>
-    <property name="idle-activation" type="empty">
-      <property name="enabled" type="bool" value="false"/>
-    </property>
-    <property name="enabled" type="bool" value="false"/>
-  </property>
-</channel>
-    '';
+        "plugin-1" = "applicationsmenu";
+
+        "plugin-2" = "tasklist";
+        "plugin-2/grouping" = 0;
+
+        "plugin-3" = "separator";
+        "plugin-3/expand" = true;
+        "plugin-3/style" = 0;
+
+        "plugin-4" = "pager";
+
+        "plugin-5" = "separator";
+
+        "plugin-6" = "systray";
+
+        "plugin-7" = "separator";
+
+        "plugin-8" = "clock";
+        "plugin-8/digital-date-font" = "Sans 10";
+        "plugin-8/timezone" = "Europe/Berlin";
+
+        "plugin-9" = "separator";
+
+        "plugin-10" = "actions";
+
+        "plugin-11" = "power-manager-plugin";
+
+        "plugin-13" = "clock";
+        "plugin-13/digital-layout" = 3;
+        "plugin-13/digital-time-font" = "Sans 10";
+      };
+
+      xfce4-screensaver = {
+        "lock/saver-activation/enabled" = false;
+        "saver/enabled" = false;
+      };
+
+      xsettings = {
+        "MonospaceFontName" = "Gtk/JetBrainsMono Nerd Font 10";
+        "Net/IconThemeName" = "Adwaita";
+        "Net/ThemeName" = "Adwaita-dark";
+      };
+    };
   };
 
 }
