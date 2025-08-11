@@ -89,6 +89,15 @@
     userEmail = "marijke.stein@hfmdk-frankfurt.de";
   };
 
+  home.file.".bashrc" = {
+  text = ''
+alias la="eza -l --icons --git"
+
+eval "$(starship init bash)"
+    '';
+  };
+
+
   home.file.".config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml" = {
   text = ''
 <?xml version="1.1" encoding="UTF-8"?>
