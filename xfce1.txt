@@ -1,0 +1,20 @@
+  programs.xfce = {
+    xfconf = {
+      settings = {
+        # Hier konfigurierst du deine Xfce-Kanäle und -Optionen
+        "xfce4-desktop" = {
+          # Beispiel: Ein Hintergrundbild setzen
+          # "/backdrop/screen0/monitor0/workspace0/last-image" = "${./wallpaper.jpg}";
+          
+          # Beispiel: Den Hintergrundstil festlegen (0 = none, 5 = centered)
+          "/backdrop/screen0/monitor0/workspace0/image-style" = 5;
+        };
+
+        "xfce4-panel" = {
+          # Beispiel: Die Position des ersten Panels ändern
+          "/panels/panel-0/position" = "bottom";
+          "/panels/panel-0/size" = 36;
+        };
+      };
+    };
+  };
