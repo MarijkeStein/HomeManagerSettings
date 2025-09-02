@@ -33,8 +33,11 @@ in
     pkgs.eza
     pkgs.fend
     pkgs.jetbrains.pycharm-community-bin
+    pkgs.python313
+    pkgs.python313Packages.ipython
     pkgs.rustup
     pkgs.starship
+    pkgs.uv
 
     pkgs.eog
     pkgs.evince
@@ -107,6 +110,9 @@ in
     enable = true;
     userName = "Marijke Stein";
     userEmail = "marijke.stein@hfmdk-frankfurt.de";
+    aliases = {
+      st = "status";
+    };
     extraConfig = {
       core.editor = "mcedit";
     };
