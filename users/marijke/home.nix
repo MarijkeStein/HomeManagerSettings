@@ -1,6 +1,14 @@
 { config, pkgs, ... }:
 
+let
+    #monitorConfig = "laptop-only";
+    monitorConfig = "laptop-and-monitors";
+in
 {
+  imports = [
+      ./${monitorConfig}.nix
+  ];
+
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "mstein";
@@ -123,8 +131,8 @@ eval "$(starship init bash)"
   xfconf = {
     settings = {
       xfce4-desktop = {
-        "backdrop/screen0/monitoreDP-1/workspace0/image-style" = 0;
-        "backdrop/screen0/monitoreDP-1/workspace1/image-style" = 0;
+#         "backdrop/screen0/monitoreDP-1/workspace0/image-style" = 0;
+#         "backdrop/screen0/monitoreDP-1/workspace1/image-style" = 0;
         "desktop-icons/file-icons/show-filesystem" = 0;
         "desktop-icons/file-icons/show-trash" = 1;
       };
@@ -135,8 +143,8 @@ eval "$(starship init bash)"
 
       xfce4-panel = {
         "panels/dark-mode" = true;
-        "panels/panel-1/icon-size" = 12;
-        "panels/panel-1/size" = 24;
+#         "panels/panel-1/icon-size" = 12;
+#         "panels/panel-1/size" = 24;
 
         "plugin-1" = "applicationsmenu";
 
@@ -176,7 +184,7 @@ eval "$(starship init bash)"
       };
 
       xsettings = {
-        "MonospaceFontName" = "Gtk/JetBrainsMono Nerd Font 10";
+#         "MonospaceFontName" = "Gtk/JetBrainsMono Nerd Font 10";
         "Net/IconThemeName" = "Adwaita";
         "Net/ThemeName" = "Adwaita-dark";
       };
