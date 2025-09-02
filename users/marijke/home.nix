@@ -85,6 +85,11 @@ in
     # '')
   ];
 
+  nixpkgs.config.permittedInsecurePackages = [
+    "fluffychat-linux-1.27.0"
+    "olm-3.2.16"
+  ];
+
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.ls file'.
   home.file = {
