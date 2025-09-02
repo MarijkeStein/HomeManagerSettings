@@ -41,6 +41,7 @@ in
 
     pkgs.eog
     pkgs.evince
+    pkgs.file
     pkgs.gimp
     pkgs.git
     pkgs.gnome-terminal
@@ -66,6 +67,8 @@ in
     pkgs.libreoffice
     pkgs.vistafonts
 
+    pkgs.espanso
+    pkgs.fluffychat
     pkgs.nmap
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
