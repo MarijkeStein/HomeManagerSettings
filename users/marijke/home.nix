@@ -46,6 +46,7 @@ in
     pkgs.git
     pkgs.gnome-terminal
     pkgs.keepassxc
+    pkgs.pinentry-gtk2
     pkgs.rdesktop
     pkgs.signal-desktop
     pkgs.thunderbird
@@ -134,13 +135,31 @@ eval "$(starship init bash)"
     '';
   };
 
+  # for NitroKey:
+  home.file.".gnupg/scdaemon.conf" = {
+  text = ''
+disable-ccid
+    '';
+  };
+
+#  services.udev.extraRules = ''
+#    KERNEL=="hidraw*", ATTRS{idVendor}=="20a0", ATTRS{idProduct}=="4108", TAG+="uaccess"
+#  '';
+#
+#  # If you want to use GPG/PCSC daemon with it, you might need these as well
+#  services.udev.extraRules = ''
+#    # Yubico PCSC daemon
+#    ATTRS{idVendor}=="20a0", ATTRS{idProduct}=="4108", ENV{ID_SMARTCARD_READER}="1", TAG+="uaccess"
+#  '';
+
+  services.gpg-agent.enable = true;
+  services.gpg-agent.pinentry.package = pkgs.pinentry-gtk2;
+
   gtk.enable = true;
   gtk.theme.name = "Adwaita-dark";
 
   qt.enable = true;
   qt.style.name = "darker";
-
-#   qt.kde.settings;
 
   xfconf = {
     settings = {
