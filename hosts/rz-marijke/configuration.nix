@@ -108,7 +108,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    curl eza git gnupg killall mc mmv tree usbutils wget
+    curl eza git gnupg htop killall mc mmv pciutils tree usbutils wget wirelesstools
 
     ccid nitrokey-app nitrokey-app2 nitrokey-udev-rules pam_u2f pcsc-tools
   ];

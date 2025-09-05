@@ -39,6 +39,7 @@ in
     pkgs.starship
     pkgs.uv
 
+    pkgs.autorandr
     pkgs.eog
     pkgs.evince
     pkgs.file
