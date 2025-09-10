@@ -1,11 +1,5 @@
 { config, pkgs, ... }:
 {
-  home.activation.xrandrLaptopOnly = ''
-    $DRY_RUN_CMD ${pkgs.xorg.xrandr}/bin/xrandr --output eDP-1 --auto --primary
-    $DRY_RUN_CMD ${pkgs.xorg.xrandr}/bin/xrandr --output DP-1 --off
-    $DRY_RUN_CMD ${pkgs.xorg.xrandr}/bin/xrandr --output HDMI-1 --off
-  '';
-
  xfconf = {
     settings = {
       xfce4-desktop = {

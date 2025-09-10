@@ -32,35 +32,29 @@ in
     pkgs.bottom
     pkgs.eza
     pkgs.fend
-    pkgs.jetbrains.pycharm-community-bin
-    pkgs.python313
-    pkgs.python313Packages.ipython
-    pkgs.rustup
-    pkgs.starship
-    pkgs.uv
-
-    pkgs.autorandr
-    pkgs.eog
-    pkgs.evince
     pkgs.file
-    pkgs.gimp
     pkgs.git
-    pkgs.gnome-terminal
-    pkgs.keepassxc
-    pkgs.pinentry-gtk2
-    pkgs.rdesktop
-    pkgs.signal-desktop
-    pkgs.thunderbird
+
     pkgs.unzip
     pkgs.zip
+
+    pkgs.eog
+    pkgs.evince
+    pkgs.gimp
+    pkgs.gnome-terminal
+    pkgs.signal-desktop
+    pkgs.thunderbird
+    pkgs.vlc
+
+    pkgs.keepassxc
+    pkgs.mate.mate-calc
+    pkgs.pinentry-gtk2
+    pkgs.xfce.xfconf
 
     pkgs.libsForQt5.qt5ct
     pkgs.kdePackages.kate
     pkgs.kdePackages.kconfig
     pkgs.kdePackages.okular
-
-    pkgs.mate.mate-calc
-    pkgs.xfce.xfconf
 
     pkgs.corefonts
     pkgs.hyphen
@@ -69,9 +63,23 @@ in
     pkgs.libreoffice
     pkgs.vistafonts
 
+    pkgs.cdparanoia
+
+    pkgs.autorandr
     pkgs.espanso
-    pkgs.fluffychat
+
     pkgs.nmap
+
+    pkgs.fluffychat
+    pkgs.rdesktop
+
+    pkgs.jetbrains.pycharm-community-bin
+    pkgs.python313
+    pkgs.python313Packages.ipython
+    pkgs.rustup
+    pkgs.starship
+    pkgs.uv
+
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -177,8 +185,6 @@ disable-ccid
 
       xfce4-panel = {
         "panels/dark-mode" = true;
-#         "panels/panel-1/icon-size" = 12;
-#         "panels/panel-1/size" = 24;
 
         "plugin-1" = "applicationsmenu";
 
@@ -224,5 +230,4 @@ disable-ccid
       };
     };
   };
-
 }
