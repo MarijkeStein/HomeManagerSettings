@@ -109,7 +109,7 @@
   environment.systemPackages = with pkgs; [
     autorandr curl eza git gnupg htop killall mc mmv pciutils tree usbutils wget wirelesstools
 
-    ccid nitrokey-app nitrokey-app2 nitrokey-udev-rules pam_u2f pcsc-tools
+    ccid nitrokey-udev-rules pam_u2f pcsc-tools pynitrokey
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -124,12 +124,18 @@
 
   services.openssh.enable = true;
 
-  # Nitrokey
-  security.pam.u2f.enable = true;
+  security.pam.u2f = {
+    enable = true;
+    settings = {
+      authfile = "/etc/u2f_mappings";
+      cue = true;
+      interactive = true;
+    };
+  };
+
   security.pam.services = {
     login.u2fAuth = true;
     sudo.u2fAuth = true;
-    # gdm.u2fAuth = true; # Example for GDM
   };
 
   services.pcscd.enable = true;
