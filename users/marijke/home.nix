@@ -113,7 +113,7 @@ in
   programs.home-manager.enable = true;
 
   home.sessionVariables = {
-    EDITOR = "mc";
+    EDITOR = "mcedit";
   };
 
   programs.git = {
