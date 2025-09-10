@@ -51,10 +51,9 @@
     LC_TIME = "de_DE.UTF-8";
   };
 
-  # Enable the X11 windowing system.
+  # X11 + XFCE
+  services.autorandr.enable = true;
   services.xserver.enable = true;
-
-  # Enable the XFCE Desktop Environment.
   services.xserver.displayManager.lightdm.enable = true;
   services.xserver.desktopManager.xfce.enable = true;
 
@@ -108,7 +107,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    curl eza git gnupg htop killall mc mmv pciutils tree usbutils wget wirelesstools
+    autorandr curl eza git gnupg htop killall mc mmv pciutils tree usbutils wget wirelesstools
 
     ccid nitrokey-app nitrokey-app2 nitrokey-udev-rules pam_u2f pcsc-tools
   ];
@@ -123,7 +122,6 @@
 
   # List services that you want to enable:
 
-  # Enable the OpenSSH daemon.
   services.openssh.enable = true;
 
   # Nitrokey
@@ -133,6 +131,7 @@
     sudo.u2fAuth = true;
     # gdm.u2fAuth = true; # Example for GDM
   };
+
   services.pcscd.enable = true;
 
   # Open ports in the firewall.
