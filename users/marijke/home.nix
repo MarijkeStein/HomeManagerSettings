@@ -38,12 +38,15 @@ in
     pkgs.unzip
     pkgs.zip
 
+    pkgs.autorandr
     pkgs.eog
+    pkgs.espanso
     pkgs.evince
     pkgs.gimp
     pkgs.gnome-terminal
     pkgs.signal-desktop
     pkgs.thunderbird
+    pkgs.totem
     pkgs.vlc
 
     pkgs.keepassxc
@@ -64,14 +67,13 @@ in
     pkgs.vistafonts
 
     pkgs.cdparanoia
-
-    pkgs.autorandr
-    pkgs.espanso
+    pkgs.flac
+    pkgs.vorbis-tools
 
     pkgs.nmap
 
     pkgs.fluffychat
-    pkgs.rdesktop
+    pkgs.freerdp
 
     pkgs.jetbrains.pycharm-community-bin
     pkgs.python313

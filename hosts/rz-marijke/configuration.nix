@@ -107,9 +107,27 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    autorandr curl eza git gnupg htop killall mc mmv pciutils tree usbutils wget wirelesstools
+    curl
+    eza
+    git
+    gnupg
+    htop
+    killall
+    mc
+    mmv
+    pciutils
+    tree
+    usbutils
+    wget
 
-    ccid nitrokey-udev-rules pam_u2f pcsc-tools pynitrokey
+    ccid
+    nitrokey-udev-rules
+    pam_u2f
+    pcsc-tools pynitrokey
+
+    autorandr
+    nmap
+    wirelesstools
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
