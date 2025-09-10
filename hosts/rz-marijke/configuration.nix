@@ -130,6 +130,7 @@
       authfile = "/etc/u2f_mappings";
       cue = true;
       interactive = true;
+      pinverification = 1;
     };
   };
 
