@@ -107,8 +107,11 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    bat
+    bottom
     curl
     eza
+    file
     git
     gnupg
     htop
@@ -117,15 +120,33 @@
     mmv
     pciutils
     tree
+    unzip
     usbutils
     wget
+    zip
+
+    eog
+    evince
+    gimp
+    gnome-terminal
+    keepassxc
+    mate.mate-calc
+    pinentry-gtk2
+    signal-desktop
+    thunderbird
+    totem
+    vlc
+
+    hyphen
+    hyphenDicts.de_DE
+    hyphenDicts.de-de
+    libreoffice
 
     ccid
     nitrokey-udev-rules
     pam_u2f
     pcsc-tools pynitrokey
 
-    autorandr
     nmap
     wirelesstools
   ];

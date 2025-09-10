@@ -28,30 +28,12 @@ in
   home.packages = [
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
-    pkgs.bat
-    pkgs.bottom
-    pkgs.eza
-    pkgs.fend
-    pkgs.file
-    pkgs.git
-
-    pkgs.unzip
-    pkgs.zip
 
     pkgs.autorandr
-    pkgs.eog
-    pkgs.espanso
-    pkgs.evince
-    pkgs.gimp
-    pkgs.gnome-terminal
-    pkgs.signal-desktop
-    pkgs.thunderbird
-    pkgs.totem
-    pkgs.vlc
+    pkgs.fend
+    pkgs.nmap
 
-    pkgs.keepassxc
-    pkgs.mate.mate-calc
-    pkgs.pinentry-gtk2
+    pkgs.espanso
     pkgs.xfce.xfconf
 
     pkgs.libsForQt5.qt5ct
@@ -60,17 +42,11 @@ in
     pkgs.kdePackages.okular
 
     pkgs.corefonts
-    pkgs.hyphen
-    pkgs.hyphenDicts.de_DE
-    pkgs.hyphenDicts.de-de
-    pkgs.libreoffice
     pkgs.vistafonts
 
     pkgs.cdparanoia
     pkgs.flac
     pkgs.vorbis-tools
-
-    pkgs.nmap
 
     pkgs.fluffychat
     pkgs.freerdp
