@@ -49,7 +49,7 @@ in
     pkgs.vorbis-tools
 
     pkgs.fluffychat
-    pkgs.freerdp
+    pkgs.remmina
 
     pkgs.jetbrains.pycharm-community-bin
     pkgs.python313
