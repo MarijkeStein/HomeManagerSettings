@@ -180,6 +180,10 @@
 
   services.pcscd.enable = true;
 
+  xdg.portal.enable = true;
+  services.flatpak.enable = true;
+  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-xapp ];
+
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
