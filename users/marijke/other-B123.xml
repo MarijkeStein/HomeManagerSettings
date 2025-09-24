@@ -1,0 +1,77 @@
+<application>
+  <component name="AppInspectionProfilesVisibleTreeState">
+    <entry key="Default">
+      <profile-state>
+        <selected-state>
+          <State>
+            <id>User defined</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="FileEditorProviderManager">{}</component>
+  <component name="LangManager">
+    <option name="languageName" value="Python" />
+  </component>
+  <component name="NotRoamableUiSettings">
+    <option name="fontFace" value="Inter" />
+    <option name="fontSize" value="13.0" />
+    <option name="ideScale" value="1.25" />
+    <option name="presentationModeIdeScale" value="1.75" />
+  </component>
+  <component name="PropertyService"><![CDATA[{
+  "keyToString": {
+    "LAST_CALCULATED_COLOR_INDEX_KEY": "3",
+    "NextRunPlatformUpdateBuild": "PC-251.26927.90",
+    "NextRunPlatformUpdateSelfBuild": "PC-251.26094.141",
+    "NextRunPlatformUpdateVersion": "2025.1.3.1",
+    "PyCharm.InitialConfiguration": "true",
+    "PyCharm.InitialConfiguration.V2": "true",
+    "PyCharm.InitialConfiguration.V3": "true",
+    "PyCharm.InitialConfiguration.V4": "true",
+    "PyCharm.InitialConfiguration.V5": "true",
+    "PyCharm.InitialConfiguration.V6": "true",
+    "PyCharm.InitialConfiguration.V7": "true",
+    "PyCharm.InitialConfiguration.V8": "true",
+    "PyCharm.Uv.Path": "/home/mstein/.nix-profile/bin/uv",
+    "RunOnceActivity.TerminalOptionsProvider.migration.2025.1.1": "true",
+    "RunOnceActivity.VFSInitializationConditionsToFusReporter": "true",
+    "RunOnceActivity.git.modal.commit.deprecation.notification": "true",
+    "SettingsSearchHistory": "trail\ncomple\nassis",
+    "ask.about.ctrl.y.shortcut.v2": "true",
+    "enter_selection_count": "5",
+    "evaluation.feedback.enabled": "false",
+    "experimental.ui.on.first.startup": "true",
+    "experimental.ui.used.version": "251.26094.141",
+    "experimentalFeature.terminal.shell.command.handling": "false",
+    "fileTypeChangedCounter": "3",
+    "fontSizeToResetConsole": "13.0",
+    "fontSizeToResetEditor": "13.0",
+    "got.it.tooltip.Plugins Auto-Update": "1",
+    "got.it.tooltip.python.uv.promo.tooltip": "1",
+    "input.method.disabler.muted": "true",
+    "last_opened_file_path": "/home/mstein/.nix-profile/bin/python3",
+    "llm.installer.last.toolwindow.state": "LLM_INSTALLER",
+    "migrated.non.roamable.values.from.general.settings": "true",
+    "previousColorScheme": "_@user_Dark",
+    "python.new.interpreter.fav.manager": "UV",
+    "python.new.interpreter.fav.method": "CREATE_NEW",
+    "python.new.interpreter.fav.mode": "CUSTOM",
+    "registry.to.advanced.settings.migration.build": "PC-251.26094.141",
+    "terminal.gen.one.option.visible": "false",
+    "whats.new.last.shown.version": "2025-1.2-26094-6f065183c835868e278363490753d1b84b4aeb30"
+  },
+  "keyToStringList": {
+    "file.chooser.recent.files": [
+      "/home/mstein/.nix-profile/bin/python3",
+      "/home/mstein/code/timetracker",
+      "/home/mstein/code/home-manager"
+    ],
+    "fileTypeDetectors": [
+      "com.intellij.ide.scratch.ScratchFileServiceImpl$Detector",
+      "org.jetbrains.plugins.textmate.TextMateFileType$TextMateFileDetector"
+    ]
+  }
+}]]></component>
+</application>
