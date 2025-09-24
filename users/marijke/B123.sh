@@ -1,6 +1,8 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
-MONITORPORT=DP-8
+set -euxo pipefail
+
+MONITORPORT=$(xrandr --listmonitors | awk '/3840/ && /2160/ { print $4 }')
 
 autorandr --match-edid --load B123
 
