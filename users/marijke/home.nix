@@ -30,6 +30,7 @@ in
     # # "Hello, world!" when run.
 
     pkgs.autorandr
+    pkgs.borgbackup
     pkgs.fend
     pkgs.nmap
 
@@ -39,7 +40,9 @@ in
     pkgs.libsForQt5.qt5ct
     pkgs.kdePackages.kate
     pkgs.kdePackages.kconfig
+    pkgs.kdePackages.konsole
     pkgs.kdePackages.okular
+    pkgs.marksman
 
     pkgs.corefonts
     pkgs.vistafonts
@@ -49,8 +52,10 @@ in
     pkgs.vorbis-tools
 
     pkgs.fluffychat
+    pkgs.nextcloud-client
     pkgs.remmina
 
+    pkgs.gitkraken
     pkgs.jetbrains.pycharm-community-bin
     pkgs.python313
     pkgs.python313Packages.ipython
