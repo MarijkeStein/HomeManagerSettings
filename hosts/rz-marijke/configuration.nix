@@ -147,6 +147,7 @@
     pam_u2f
     pcsc-tools pynitrokey
 
+    cifs-utils
     nmap
     wirelesstools
   ];
