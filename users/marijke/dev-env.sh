@@ -14,13 +14,13 @@ thunderbird &
 
 keepassxc &
 
+nextcloud &
+
 sleep 1
 
-# Kalender
-firefox https://zeiterfassung.hfmdk-frankfurt.de https://owa.rz.hfmdk-frankfurt.de/owa/#path=/calendar/view/WorkWeek &
-
-# RZ-Teeküche
-firefox --new-window https://webconf.hfmdk-frankfurt.de/b/bac-fhb-v6w-kib &
+firefox --new-window https://owa.rz.hfmdk-frankfurt.de/owa/#path=/calendar/view/WorkWeek \
+                     https://fluffychat.im/web \
+                     https://zeiterfassung.hfmdk-frankfurt.de &
 
 # Work log etc.
 kate ~/misc/log/current.txt ~/Notes.txt &
