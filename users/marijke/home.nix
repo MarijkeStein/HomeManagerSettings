@@ -112,6 +112,7 @@ in
     userName = "Marijke Stein";
     userEmail = "marijke.stein@hfmdk-frankfurt.de";
     aliases = {
+      co = "checkout";
       st = "status";
     };
     extraConfig = {

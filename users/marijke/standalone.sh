@@ -17,9 +17,9 @@ xfconf-query -c "xsettings" -p "/Net/ThemeName" -s "Adwaita-dark"
 
 dconf write \
       /org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/font \
-      "'JetBrainsMono Nerd Font 12'"
+      "'JetBrainsMono Nerd Font 13'"
 
-cp other-standalone.xml "${HOME}/.config/JetBrains/PyCharmCE2025.1/options"
+cp other.xml "${HOME}/.config/JetBrains/PyCharmCE2025.1/options"
 
 #         "backdrop/screen0/monitoreDP-1/workspace0/image-style" = 0;
 #         "backdrop/screen0/monitoreDP-1/workspace1/image-style" = 0;
