@@ -45,6 +45,15 @@
     randomizedDelaySec = "3h";
   };
 
+  nix = {
+    settings = {
+      experimental-features = [ "nix-command" "flakes" ];
+#      flake-registry = "${inputs.flake-registry}/flake-registry.json";
+    };
+    package = pkgs.lix;
+  };
+
+
   # Set your time zone.
   time.timeZone = "Europe/Berlin";
 
@@ -157,12 +166,17 @@
     ccid
     nitrokey-udev-rules
     pam_u2f
-    pcsc-tools pynitrokey
+    pcsc-tools
 
     cifs-utils
     nmap
     wirelesstools
   ];
+
+  nixpkgs.config.permittedInsecurePackages = [
+    "pynitrokey"
+  ];
+
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

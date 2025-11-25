@@ -28,6 +28,7 @@ in
   home.packages = [
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
+    pkgs.nix-output-monitor
 
     pkgs.autorandr
     pkgs.borgbackup
@@ -63,6 +64,8 @@ in
     pkgs.starship
     pkgs.uv
 
+    pkgs.fluffychat
+
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -78,10 +81,13 @@ in
     # '')
   ];
 
+
+/*
   nixpkgs.config.permittedInsecurePackages = [
     "fluffychat-linux-1.27.0"
     "olm-3.2.16"
   ];
+*/
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.ls file'.
