@@ -22,6 +22,19 @@
     powerOnBoot = true;
   };
 
+  hardware.printers = {
+    ensurePrinters = [
+      {
+        # "lpinfo -v" shows the device URI of found printers
+        name = "HP_M400dn";
+        deviceUri = "usb://HP/LaserJet%20Pro%20M404-M405?serial=PHCL326231";
+        location = "B123";
+        model = "drv:///HP/hp-laserjet_pro_m404-m405-ps.ppd";
+      }
+    ];
+    ensureDefaultPrinter = "HP_M400dn";
+  };
+
   programs.bash.shellAliases = {
     la = "eza -ahl";
   };
@@ -113,7 +126,7 @@
   users.users.mstein = {
     isNormalUser = true;
     description = "Marijke Stein";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "lp" "networkmanager" "wheel" ];
     packages = with pkgs; [
     #  thunderbird
     ];
@@ -154,6 +167,7 @@
     mate.mate-calc
     pinentry-gtk2
     signal-desktop
+    system-config-printer
     thunderbird
     totem
     vlc
@@ -168,12 +182,16 @@
     pam_u2f
     pcsc-tools
 
+    nix-index
+
     cifs-utils
     nmap
     wirelesstools
 
     openssl
     openvpn
+
+    hplip                   # HP Linux Imaging and Printing, supporting the HP LaserJet Pro M404dn printer
   ];
 
   nixpkgs.config.permittedInsecurePackages = [
