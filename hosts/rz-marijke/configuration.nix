@@ -36,6 +36,15 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
+  # Garbage collection
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 15d";
+    persistent = true;
+    randomizedDelaySec = "3h";
+  };
+
   # Set your time zone.
   time.timeZone = "Europe/Berlin";
 
