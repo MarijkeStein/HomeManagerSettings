@@ -171,6 +171,9 @@
     cifs-utils
     nmap
     wirelesstools
+
+    openssl
+    openvpn
   ];
 
   nixpkgs.config.permittedInsecurePackages = [
